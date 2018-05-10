@@ -376,7 +376,6 @@ b_tp_err_code_t b_tp_send_data(b_TPU8 *pbuf, b_TPU32 len)
 {
     b_tp_err_code_t err_code = B_TP_SUCCESS;
     b_tp_pack_info_t *pb_tp_pack_info = b_TP_NULL;
-    b_TPU8 icount = 0;
     if(pbuf == b_TP_NULL || len == 0 || B_TP_LOCK == _b_tp_send_get_lock())
     {
         return B_TP_PARAM_ERR;
