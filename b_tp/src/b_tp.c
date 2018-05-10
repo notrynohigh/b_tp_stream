@@ -272,7 +272,8 @@ b_tp_err_code_t b_tp_receive_data(b_TPU8 *pbuf, b_TPU32 len)
                 }
             } 
         }
-        else
+        
+        if(gs_tp_rec_info.data_index != -1)
         {
             if(gs_tp_rec_info.expect_number > 0)
             {

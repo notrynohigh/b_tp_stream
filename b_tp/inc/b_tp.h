@@ -26,6 +26,10 @@
 
 #include "b_tp_config.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * @addtogroup B_TP
  * @{
@@ -133,6 +137,10 @@ void _b_tp_send_set_head(b_tp_head_t *);
 /**
  * @}
  */
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
 
