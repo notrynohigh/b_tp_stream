@@ -339,7 +339,7 @@ b_tp_err_code_t b_tp_receive_data(b_TPU8 *pbuf, b_TPU32 len)
                             gs_tp_rec_info.status = STA_CHECK_FNUM;
                             gs_tp_rec_info.expect_number = sizeof(B_TP_FRAME_NUMBER_TYPE);
                         }
-                        break
+                        break;
                     case STA_CHECK_FNUM:
                         gs_tp_rec_info.data_index = gs_tp_rec_info.data_index - sizeof(B_TP_FRAME_NUMBER_TYPE);
                         if(((B_TP_FRAME_NUMBER_TYPE *)(&(sg_b_tp_rec_buf[gs_tp_rec_info.data_index])))[0] == gs_tp_rec_info.expect_fnum)
