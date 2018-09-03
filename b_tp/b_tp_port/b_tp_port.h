@@ -25,7 +25,7 @@
 #define __B_TP_PORT_H__
 
 #include "stdint.h"
-#include "b_tp.h"
+#include "../inc/b_tp.h"
 /**
  * @addtogroup B_TP
  * @{

@@ -24,8 +24,7 @@
 #ifndef __B_TP_H__
 #define __B_TP_H__
 
-#include "b_tp_config.h"
-
+#include "../b_tp_port/b_tp_config.h"
 #ifdef __cplusplus
 extern "C" {
 #endif

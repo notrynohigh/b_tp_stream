@@ -21,15 +21,15 @@
  * SOFTWARE.
  *****************************************************************************
  */
-#include "b_tp.h"
-#include "b_tp_port.h"
+#include "../inc/b_tp.h"
+#include "../b_tp_port/b_tp_port.h"
 #include "stdlib.h"
 #include "string.h"
 
 #if (B_TP_CHECK_SELECT == B_TP_SUM)
 #include "sum_8bit.h"
 #elif (B_TP_CHECK_SELECT == B_TP_CRC16)
-#include "crc16.h"
+#include "../check/crc16/crc16.h"
 #else
 #include "crc32.h"
 #endif

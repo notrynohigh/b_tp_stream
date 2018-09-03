@@ -22,8 +22,8 @@
  *****************************************************************************
  */
 #include "b_tp_port.h"
-#include "stdio.h"
 #include "string.h"
+#include "./uart/uart.h"
 /**
  * @addtogroup B_TP
  * @{
@@ -35,21 +35,19 @@
  */
 
 
-extern uint8_t  b_table[];
-extern uint32_t b_len;
-
 
 b_tp_err_code_t b_tp_port_send(uint8_t *pbuf, uint32_t len)
 {
     uint32_t i = 0;
-    memcpy(b_table + b_len, pbuf, len);
-    b_len += len;        
-
-    for(i = 0;i < len;i++)
+    
+    if(v32_uartx == USART1)
     {
-        printf("%d ", pbuf[i]);
+        uart1_write(pbuf, len);
     }
-    printf("\n\r");
+    else
+    {
+        uart0_write(pbuf, len);
+    }
     return B_TP_SUCCESS;
 }
 
