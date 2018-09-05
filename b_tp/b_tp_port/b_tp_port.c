@@ -37,9 +37,7 @@
 
 
 b_tp_err_code_t b_tp_port_send(uint8_t *pbuf, uint32_t len)
-{
-    uint32_t i = 0;
-    
+{ 
     if(v32_uartx == USART1)
     {
         uart1_write(pbuf, len);
