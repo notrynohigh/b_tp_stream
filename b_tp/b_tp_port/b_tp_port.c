@@ -24,6 +24,7 @@
 #include "b_tp_port.h"
 #include "string.h"
 #include "./uart/uart.h"
+#include "./delay/delay.h"
 /**
  * @addtogroup B_TP
  * @{
@@ -46,6 +47,7 @@ b_tp_err_code_t b_tp_port_send(uint8_t *pbuf, uint32_t len)
     {
         uart0_write(pbuf, len);
     }
+    delay_xms(80);
     return B_TP_SUCCESS;
 }
 
